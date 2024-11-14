@@ -385,28 +385,43 @@
     display: flex;
     gap: 10px;
     align-items: center;
+    flex-wrap: wrap; 
 }
 
-.btn {
-    
-    height: 50px; 
+.button-container .btn {
+    width: 200px; /* Set a fixed width */
+    height: 50px; /* Set a fixed height */
     font-size: 16px;
     font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 8px; 
+    white-space: nowrap; /* Prevent text from wrapping */
     cursor: pointer;
     transition: all 0.3s ease;
 }
-#upload{
+
+#upload {
     background-color: #e1e3e2;
     color: black;
 }
-#upload:hover{
+
+#upload:hover {
     background-color: #d3c54a;
     color: black;
 }
+
+.btn-outline {
+    background-color: #e1e3e2;
+    color: black;
+}
+
+.btn-outline:hover {
+    background-color: #d3c54a;
+    color: black;
+}
+
 
 #dropdown-menu {
     position: absolute; 
@@ -442,11 +457,6 @@
     color: black; 
 }
 
-
-
-.btn-outline:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
 .footer-buttons {
     display: flex;
     gap: 10px; 
@@ -520,6 +530,12 @@
    /* Media queries for responsiveness */
    @media (max-width: 992px) {
             .navbar-text {display: none;}
+            .navbar-top {
+                display: none; /* Hides the first navbar */
+            }
+            .navbar-main{
+                padding-top: 0;
+            }
             
         }
         @media (max-width: 768px) {
@@ -540,7 +556,10 @@
             .container1 {width: 380px;}
         }
         @media (max-width: 440px) {
-            
+            #upload{
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
             .container1 {width: 350px;}
         }
         @media (max-width: 407px) {
@@ -554,4 +573,13 @@
         @media (max-width: 347px) {
             
             .container1 {width: 280px;}
+        }
+
+        @media (max-width: 576px) {
+            .button-container {
+                flex-direction: column; /* Stack vertically on small screens */
+            }
+            .button-container .btn {
+                width: 100%; /* Full-width buttons on small screens */
+            }
         }
