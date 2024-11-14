@@ -191,7 +191,7 @@
                             <div class="modal-dialog modal-dialog-centered wider-modal" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="noBillModalLabel">No Bill Available</h5>
+                                        <h5 class="modal-title" id="noBillModalLabel">Start Your Journey here</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
@@ -199,7 +199,7 @@
                                     <div class="modal-body">
                                         <div class="container">
                                             <div class="row text-center mb-4">
-                                                <label class="form-label w-100">Choose Your Service</label>
+                                                <label class="form-label w-100">Choose Your Services</label>
                                                 <div class="col-4">
                                                     <div class="option-card" onclick="toggleSelection(this)">
                                                         <p>Gas</p>
@@ -402,7 +402,7 @@
                 const elecProvider = response.elecprovider || "";
                 $('#uploadModal').modal('hide');
                 $('#savingsAmount').text(`You could save €${savingsAmount.toFixed(2)}!`);
-                $('#elecProvider').text(elecProvider ? `Service provider: ${elecProvider}` : "");
+                $('#elecProvider').text(elecProvider ? `Current provider: ${elecProvider}` : "");
                 $('#amountModal').modal('show'); 
             },
             error: function(error) {
