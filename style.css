@@ -524,6 +524,9 @@
     flex-direction: column;
     align-items: center;
 }
+.navbar-toggler .fa-bars {
+    color: white;
+}
 
 
 
